@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Card from './card';
+import Game from './game';
 
 const Selection = () => {
 
@@ -38,6 +39,9 @@ const Selection = () => {
                 </Link>
             </div>
         </div> 
+        <div className='hidden'>
+            <Game xName={xName} oName={oName}/>
+        </div>
     </section>
        
   );
