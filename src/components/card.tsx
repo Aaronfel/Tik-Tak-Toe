@@ -1,4 +1,3 @@
-import React from 'react';
 import CircleIcon from './svg/circle';
 import XIcon from './svg/x';
 
@@ -8,8 +7,8 @@ interface props {
 
 const Card = ({type} :props) => {
   return (
-      <div>
-        <div className='w-[300px] h-[350px] bg-blue-600 rounded-xl flex justify-center items-center'>
+      <div className='w-full lg:max-w-[300px] h-[200px] lg:h-[350px]'>
+        <div className='w-full h-full bg-blue-600 rounded-xl flex justify-center items-center'>
           <div>
             {type === 'x' ? 
               <XIcon />

@@ -18,18 +18,18 @@ const Selection = () => {
   return (
     <section className='h-screen overflow-hidden'>
         <div className='flex justify-center mt-5'>
-            <div className='bg-black text-white p-5 lg:w-[40%] text-center lg:text-xl rounded-full'>
+            <div className='bg-white p-5 lg:w-[40%] text-center lg:text-xl rounded-full'>
                 Select your weapon
             </div>
         </div>
         <div className='w-full flex justify-center mt-20 space-x-10'>
-            <div>
+            <div className='p-2'>
                 <Card type='x'/>
-                <input type="text" value={xName} className='bg-black w-full mt-2 rounded-l text-white' onChange={xNameHandler} />
+                <input type="text" value={xName} className='bg-white w-full mt-2 rounded-xl text-center' onChange={xNameHandler} />
             </div>
-            <div>
+            <div className='p-2'>
                 <Card type='o'/>
-                <input type="text" value={oName} className='bg-black w-full mt-2 rounded-l text-white' onChange={oNameHandler}/>
+                <input type="text" value={oName} className='bg-white w-full mt-2 rounded-xl text-center' onChange={oNameHandler}/>
             </div>
         </div>
         <div className='flex justify-center mt-10'>
