@@ -2,9 +2,7 @@ import React from 'react';
 import Selection from './components/selection';
 
 function App() {
-  return (
-    <Selection />
-  );
+	return <Selection />;
 }
 
 export default App;
