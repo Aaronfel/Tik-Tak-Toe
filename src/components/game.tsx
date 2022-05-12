@@ -7,7 +7,7 @@ interface props {
 	oName: string;
 }
 
-const Game = ({ xName, oName }: props) => {
+const Game = () => {
 	const [isoturn, setOturn] = useState<boolean>(false);
 	const [iconsArray, setIconsArray] = useState<any>([
 		{ id: 1, icon: null },
@@ -76,7 +76,7 @@ const Game = ({ xName, oName }: props) => {
 	return (
 		<>
 			{!game_overQ() ? (
-				<div>
+				<div className="h-screen bg-black overflow-hidden">
 					<div className="flex justify-center mt-5">
 						<div className="bg-blue-600 text-white p-5 lg:w-[40%] text-center lg:text-xl rounded-full">
 							Tik Tak Toe
@@ -98,7 +98,7 @@ const Game = ({ xName, oName }: props) => {
 					</div>
 				</div>
 			) : (
-				<div className="h-screen w-screen flex flex-col space-y-4 lg:space-y-10 justify-center items-center">
+				<div className="h-screen bg-black w-screen flex flex-col space-y-4 lg:space-y-10 justify-center items-center">
 					<div className="text-white text-5xl lg:text-9xl">{winner}</div>
 					<button
 						className="text-white bg-green-600 p-3 rounded-xl"

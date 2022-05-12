@@ -1,21 +1,9 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from './card';
-import Game from './game';
 
 const Selection = () => {
-	const [xName, setXName] = useState<string>('');
-	const [oName, setOName] = useState<string>('');
-
-	const xNameHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setXName(event.target.value);
-	};
-
-	const oNameHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setOName(event.target.value);
-	};
 	return (
-		<section className="h-screen overflow-hidden">
+		<section className="h-screen bg-black overflow-hidden">
 			<div className="flex justify-center mt-5">
 				<div className="bg-white p-5 lg:w-[40%] text-center lg:text-xl rounded-full">
 					Select your weapon
@@ -26,18 +14,18 @@ const Selection = () => {
 					<Card type="x" />
 					<input
 						type="text"
-						value={xName}
+						value={'Not yet implemented'}
 						className="bg-white w-full mt-2 rounded-xl text-center"
-						onChange={xNameHandler}
+						//onChange={}
 					/>
 				</div>
 				<div className="p-2">
 					<Card type="o" />
 					<input
 						type="text"
-						value={oName}
+						value={'Not yet implemented'}
 						className="bg-white w-full mt-2 rounded-xl text-center"
-						onChange={oNameHandler}
+						//onChange={}
 					/>
 				</div>
 			</div>
@@ -45,9 +33,6 @@ const Selection = () => {
 				<div className="p-3 w-[20%] bg-green-600 rounded-full text-center text-white lg:text-xl">
 					<Link to={'/game'}>Play</Link>
 				</div>
-			</div>
-			<div className="hidden">
-				<Game xName={xName} oName={oName} />
 			</div>
 		</section>
 	);

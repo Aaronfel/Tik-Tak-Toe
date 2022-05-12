@@ -13,7 +13,7 @@ root.render(
 	<HashRouter>
 		<Routes>
 			<Route path="/" element={<App />} />
-			<Route path="/game" element={<Game xName="" oName="" />} />
+			<Route path="/game" element={<Game />} />
 		</Routes>
 	</HashRouter>
 );
