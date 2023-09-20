@@ -58,7 +58,7 @@ const Game = () => {
 				hasWinner = true;
 				console.log(iconsArray);
 				winner =
-					iconsArray[p1].icon.type.name === 'XIcon'
+					iconsArray[p1].icon.type.name === 'G'
 						? `the winner is X`
 						: 'the winner is O';
 			}
