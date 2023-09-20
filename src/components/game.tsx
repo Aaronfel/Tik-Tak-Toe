@@ -2,10 +2,10 @@ import { useState } from 'react';
 import Circle from './svg/circle';
 import XIcon from './svg/x';
 
-interface props {
-	xName: string;
-	oName: string;
-}
+// interface props {
+// 	xName: string;
+// 	oName: string;
+// }
 
 const Game = () => {
 	const [isoturn, setOturn] = useState<boolean>(false);
@@ -56,6 +56,7 @@ const Game = () => {
 				iconsArray[p1].icon.type.name === iconsArray[p3].icon.type.name
 			) {
 				hasWinner = true;
+				console.log(iconsArray);
 				winner =
 					iconsArray[p1].icon.type.name === 'XIcon'
 						? `the winner is X`
